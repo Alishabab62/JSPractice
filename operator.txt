@@ -1,0 +1,71 @@
+// function first_digit(num){
+//   var y=Math.floor(num/1000);
+//   return y;
+// }
+// var output=first_digit(3432);
+// console.log(output);
+
+//Arthimetic Operator
+
+
+// var x=10,y=2;
+// var z=x+y;
+// console.log(z);
+// var z=x-y;
+// console.log(z);
+// var z=x*y;
+// console.log(z);
+// var z=x/y
+// console.log(z);
+// var z=x%y;
+// console.log(z);
+// x++;
+// console.log(x);   //Output =11
+// ++x;        //Output=12
+// console.log(x);
+// x--;
+// console.log(x);
+// --x;
+// console.log(x);
+// var z=x**y;
+// console.log(z);
+
+//Assignment Operator
+
+// var x=5;
+// console.log(x);
+// x +=2;                //x=x+2;
+// console.log(x);
+// x -=2;                 //x=x-2;
+// console.log(x);
+// x *=2;               //x=x*2;
+// console.log(x);
+// x /=2;               //x=x/2;
+// console.log(x);
+// x %=2;               //x=x%2
+// console.log(x); 
+// x**=2;              //x=x**2;
+// console.log(x); 
+
+
+//Comaprison Operator
+
+// var a=5; var b=5;
+// console.log(a>b);
+// console.log(a<b);
+// console.log(a==b);
+// console.log(a!=b);
+// console.log(a>=b);
+// console.log(a<=b);
+// console.log(a===b);
+// console.log(a!==b);
+// console.log(a>b ? 1:0);
+
+//Logical Operator
+
+// var a=5; var b=2;
+// console.log((a>b)&&(a>b));
+// console.log((a>b)&&(a<b));
+// console.log((a>b)||(a>b));
+// console.log((a<b)||(a<b));
+// console.log(!(a==b));

@@ -1,0 +1,316 @@
+<html>
+
+<head>
+    <title>
+        Conversion
+        Calculator
+    </title>
+</head>
+<style>
+    #para {
+        background-color: aqua;
+        height: 100px;
+        width: 100px;
+    }
+</style>
+
+<body>
+    <p id="para">
+
+    </p>
+    <script>
+        //var input=4;
+        var input = window.prompt("Enter your chocie");
+        switch (input) {
+            case "1":
+                binaryToOctal();
+                break;
+            case 2:
+                binaryToDecimal();
+                break;
+            case 3:
+                binaryToHexadecimal();
+                break;
+            case 4:
+                decimalToOctal();
+                break;
+            case 5:
+                decimalToBinary();
+                break;
+            case 6:
+                decimalToHexadecimal();
+                break;
+            case 7:
+                hexadecimalToBinary();
+                break;
+            case 8:
+                hexadecimalToOctal();
+                break;
+            case 9:
+                hexadecimalToDecimal();
+                break;
+            case 10:
+                octalToBinary();
+                break;
+            case 11:
+                octalToDecimal();
+                break;
+            case 12:
+                octalToHexadecimal();
+                break;
+        }
+        function binaryToHexaDecimal() {
+            var binary_HexaDecimal = prompt("Enter a binary number for convert to hexadecimal");
+            var binary_HexaDecimal = String(binary_HexaDecimal);
+            var decimal = 0;
+            var res = binary_HexaDecimal.split('').reverse().join('');
+            for (var i = 0; i < res.length; i++) {
+                decimal = decimal + res[i] * (2 ** i);
+            }
+            var array = [];
+            while (Math.floor(decimal / 16) != 0) {
+                let remainder = decimal % 16;
+                decimal = Math.floor(decimal / 16);
+                array.push(remainder);
+            }
+            array.reverse();
+            let result = array.join('');
+
+            let para = document.querySelector("#para");
+
+            para.innerText = decimal + result;
+        }
+
+
+
+        function binaryToDecimal() {
+            var binary_DEcimal = prompt("Enter a binary number  for convert to octal");
+            var str = String(binary_DEcimal);
+            var decimal = 0;
+            var res = str.split('').reverse().join('');
+            for (var i = 0; i < res.length; i++) {
+                decimal = decimal + res[i] * (2 ** i);
+            }
+            // return Number(decimal);
+            let para = document.querySelector("#para");
+            para.innerText = Number(decimal);
+           
+        }
+
+
+
+        function binaryToOctal() {
+            var binary_Octel = prompt("Enter a binary number  for convert to octal");
+            var binary_Octel = String(binary_Octel);
+            var decimal = 0;
+            var res = binary_Octel.split('').reverse().join('');
+            for (var i = 0; i < res.length; i++) {
+                decimal = decimal + res[i] * (2 ** i);
+            }
+            var array = "";
+            while (Math.floor(decimal / 10) != 0) {
+                let remainder = decimal % 8;
+                decimal = Math.floor(decimal / 8);
+                array = array + remainder;
+            }
+            // var res = array.split('').reverse().join('');
+            let para = document.querySelector("#para");
+            para.innerText = decimal + array;
+        }
+
+
+
+
+        function decimalToOctal() {
+            var decimal_Octal = prompt("Enter a decimal number");
+            var array = [];
+            while (Math.floor(decimal_Octal / 8) != 0) {
+                let remainder = decimal_Octal % 8;
+                decimal_Octal = Math.floor(decimal_Octal / 8);
+                array.push(remainder);
+                console.log(array)
+            }
+            array.reverse();
+            let res = array.join('');
+            //     return (decimal_Octal + res);
+            let para = document.querySelector("#para");
+            para.innerText = decimal_Octal + res;
+        }
+
+    
+
+        function decimalToBinary() {
+           var decimal_Binary = prompt("Enter a decimal number");
+            var array = [];
+            while (Math.floor(decimal_Binary / 2) != decimal_Binary) {
+                let rem = decimal_Binary % 2;
+                decimal_Binary = Math.floor(decimal_Binary / 2);
+                array.push(rem);
+            }
+            array.reverse();
+            let result = array.join('');
+            return result;
+              let para = document.querySelector("#para");
+              para.innerText = result;
+        }
+    
+
+        function decimalToHexadecimal() {
+           var decimal_Hexadecimal = prompt("Enter a decimal number");
+            var array = [];
+            while (Math.floor(decimal_Hexadecimal / 10) != 0) {
+                let remainder = decimal_Hexadecimal % 16;
+                decimal_Hexadecimal = Math.floor(decimal_Hexadecimal / 16);
+                array.push(remainder);
+            }
+            array.reverse();
+            let result = array.join('');
+          //  return result;
+               let para = document.querySelector("#para");
+              para.innerText = result;
+        }
+        
+
+        function decimalToHexadecimal(decimal) {
+            var decimal_Hexeadecimal = prompt("Enter a hexa number");
+            var array = [];
+            while (Math.floor(decimal_Hexeadecimal / 16) != 0) {
+                let remainder = decimal_Hexeadecimal % 16;
+                decimal_Hexeadecimal = Math.floor(decimal_Hexeadecimal / 16);
+                array.push(remainder);
+            }
+            array.reverse();
+            let result = array.join('');
+            //return decimal + result;
+            let para = document.querySelector("#para");
+
+            para.innerText = decimal + result;
+        }
+
+
+
+
+        function hexadecimalToBinary() {
+           var hexadecima_Binary = prompt("Enter a hexa number");
+            var str = String(hexadecima_Binary);
+            var decimal = 0;
+            var res = str.split('').reverse().join('');
+            for (var i = 0; i < res.length; i++) {
+                decimal = decimal + res[i] * (16 ** i);
+            }
+            var array = [];
+            while (Math.floor(decimal / 2) != decimal) {
+                let rem = decimal % 2;
+                decimal = Math.floor(decimal / 2);
+                array.push(rem);
+            }
+            array.reverse();
+            let result = array.join('');
+           // return result;
+            let para = document.querySelector("#para");
+
+            para.innerText = result;
+        }
+   
+
+
+
+        function hexadecimalToOctal() {
+           var hexadecima_Octal = prompt("Enter a hexa number");
+            var str = String(hexadecima_Octal);
+            var dec = 0;
+            var res = str.split('').reverse().join('');
+            for (var i = 0; i < res.length; i++) {
+                dec = dec + res[i] * (16 ** i);
+            }
+            var array = "";
+            while (Math.floor(dec / 8) != 0) {
+                let remainder = dec % 8;
+                dec = Math.floor(dec / 8);
+                array = array + remainder;
+            }
+            var res = array.split('').reverse().join('');
+            return (dec + res);
+        let para = document.querySelector("#para");
+
+            para.innerText = dec+res;
+        }
+       
+
+
+        function octalToBinary() {
+           var octal_Binary = prompt("Enter a octal number");
+            var str = String(octal_Binary);
+            var decimal = 0;
+            var res = str.split('').reverse().join('');
+            for (var i = 0; i < res.length; i++) {
+                decimal = decimal + res[i] * (8 ** i);
+            }
+
+            var array = [];
+            while (Math.floor(decimal / 2) != decimal) {
+                let rem = decimal % 2;
+                decimal = Math.floor(decimal / 2);
+                array.push(rem);
+            }
+            array.reverse();
+            let result1 = array.join('');
+          //  return result1;
+        let para = document.querySelector("#para");
+
+        para.innerText = result1;
+        }
+
+      
+
+        function octalToDecimal() {
+        var octal_Decimal = prompt("Enter a octal number");
+            var str = String(octal_Decimal);
+            var decimal = 0;
+            var res = str.split('').reverse().join('');
+            // console.log(res[0],res[1],res[2],res[3])
+            for (var i = 0; i < res.length; i++) {
+                decimal = decimal + res[i] * (8 ** i);
+            }
+           // return decimal;
+        let para = document.querySelector("#para");
+
+        para.innerText = decimal;
+        }
+
+        
+
+        function octalToHexadecimal() {
+            var octal_HexaDecimal = prompt("Enter a octal number");
+            var str = String(octal_HexaDecimal);
+            var dec = 0;
+            var res = str.split('').reverse().join('');
+
+            for (var i = 0; i < res.length; i++) {
+                dec = dec + res[i] * (8 ** i);
+
+            }
+            //console.log(dec);
+            var array = []
+            while (Math.floor(dec / 16) != 0) {
+
+                var remainder = dec % 16;   
+                dec = Math.floor(dec / 16);  //20
+                array.push(remainder);
+                array.reverse();
+                //console.log(array);
+            }
+            let result = array.join('');
+           // return dec + result;
+        let para = document.querySelector("#para");
+
+        para.innerText = decimal;
+
+        }
+
+
+    </script>
+    
+</body>
+
+</html>
