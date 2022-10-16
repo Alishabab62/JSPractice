@@ -1013,15 +1013,7 @@
             
 
 
-// let stri="";
-// for(let i=0;i<str.length;i++){
-    //     if(stri[stri.length-1]==str[i] &&stri[stri.length-2]==str[i]){
-        //         continue;
-        //     }else{
-            //         stri+=str[i]
-            //     }
-            // }
-            // console.log(stri);
+//
             
 
 
