@@ -1015,17 +1015,87 @@
 
 //
 
-
+// function subArray(arr){
+//     let count=0;
+//     for(let start=0;start<arr.length;start++){
+//         let tempArr=[];
+//         for(let end=start;end<arr.length;end++){
+//             tempArr.push(arr[end]);
+//             console.log(tempArr);
+//             }
+//         }
+    
+//     console.log(sum);
+// }
+// subArray([1,4,2,5,3]);
             
 
+// var firstUniqChar = function(s) {
+
+// var flag=true;
+//     for(let i=0;i<s.length;i++){
+//         for(let j=1;j<s.length;j++){
+//             if(s[i]==s[j] && i!=j){    //l
+//                 flag=false;
+//             }
+//         }
+//         if(flag==true){
+//             return i;
+//         }
+//     }
+//     return -1;
+// };
+
+// console.log(firstUniqChar("loveletd"));
 
 
 
 
 
 
+// var haveConflict = function(event1, event2) {
+//     if(event1[0]>event2[0]){
+//        var swap=event2[0];
+//         event1[0]=event2[0]
+//         event1[0]=swap
+//     }else 
+//         return event1[0]<=event2[1];
+//     
+// };
+
+// console.log(haveConflict(["01:00","02:00"],["03:20","00:10"]));
 
 
 
+var isAnagram = function(s, t) {
+    if(s.length!=t.length) return false;
+    let objofS={},objofT={};
+    for(let i=0;i<s.length;i++){
+        let ch=s[i];
+        if(objofS[ch]==undefined){
+            objofS[ch]==1;
+        }
+        else{
+            objofS[chS]++;
+        }
+    }
 
+    for(let i=0;i<t.length;i++){
+        let ch=t[i];
+        if(objofT[ch]==undefined){
+            objofT[ch]==1;
+        }
+        else{
+            objofT[ch]++;
+        }
+    }
+    for(let key in objofT){
+        if(objofS[key]!=objofT[key]){
+            return false;
+        }
+    }
+    return true;
+};
+
+console.log(isAnagram("car","rat"))
 
