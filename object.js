@@ -1067,35 +1067,91 @@
 
 
 
-var isAnagram = function(s, t) {
-    if(s.length!=t.length) return false;
-    let objofS={},objofT={};
-    for(let i=0;i<s.length;i++){
-        let ch=s[i];
-        if(objofS[ch]==undefined){
-            objofS[ch]==1;
-        }
-        else{
-            objofS[chS]++;
-        }
-    }
+// var isAnagram = function(s, t) {
+//     if(s.length!=t.length) return false;
+//     let objofS={},objofT={};
+//     for(let i=0;i<s.length;i++){
+//         let ch=s[i];
+//         if(objofS[ch]==undefined){
+//             objofS[ch]==1;
+//         }
+//         else{
+//             objofS[chS]++;
+//         }
+//     }
 
-    for(let i=0;i<t.length;i++){
-        let ch=t[i];
-        if(objofT[ch]==undefined){
-            objofT[ch]==1;
-        }
-        else{
-            objofT[ch]++;
-        }
-    }
-    for(let key in objofT){
-        if(objofS[key]!=objofT[key]){
-            return false;
-        }
-    }
-    return true;
-};
+//     for(let i=0;i<t.length;i++){
+//         let ch=t[i];
+//         if(objofT[ch]==undefined){
+//             objofT[ch]==1;
+//         }
+//         else{
+//             objofT[ch]++;
+//         }
+//     }
+//     for(let key in objofT){
+//         if(objofS[key]!=objofT[key]){
+//             return false;
+//         }
+//     }
+//     return true;
+// };
 
-console.log(isAnagram("car","rat"))
+// console.log(isAnagram("car","rat"))
 
+
+
+// function lastName(str){
+  
+//     for (let i = 0; i < str.length; i++){
+//       let last = " ";
+//       if(str[i]== " "){
+//        return(str.slice(i+1));
+//       }
+//     }
+  
+//   return last;
+//   }
+//   console.log(lastName("Kumar  Singh"));
+//   exports.lastName = lastName
+
+// let a=4;
+// console.log(typeof(a))
+
+// function numbe(str){
+//     let arr=[];
+//     for( let i=0;i<str.length;i++){
+//         // console.log(typeof(str[i]))
+//         if((str[i])<=10){
+//             arr.push(str[i]);
+//                     }
+//     }
+//     return arr.join(',');
+//   }
+//   console.log(numbe('1 January 1970'));
+// // //   exports.number = number
+
+
+// function evenCapital(str){
+//     str=str.split(',');
+//     for(let i=0;i<str.length;i++){
+//         // console.log(str);
+//     //   str[i]=str[i][0].toUpperCase();
+//       console.log(str[i][0]);
+//     }
+//     // return str;
+//   }
+//   console.log(evenCapital("this is aircampus"))
+
+function strRev(str){
+    let st=str.split('')
+    console.log(st.join(''));
+    for(let i=0;i<st.length;i++){
+        
+    st[i]=st[i].split('').reverse().join('');
+    }
+    return str;
+  }
+  console.log(strRev("ABS dgsg"))
+//   exports.strRev = strRev
+  
