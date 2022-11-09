@@ -1174,25 +1174,25 @@
 //     return resArr;
 // }
 
-function biggerElement(arr){
-    let flag=true;
-    let stack=[];
-    for(let i=0;i<arr.length;i++){
-        if(stack.length==0){           //[1,3,2,4]
-            stack.push(arr[i]);
-            i++;
-        }
-        if(stack[0]<arr[i]){    //stack=
-            stack.pop()
-            stack.push(arr[i]);   //stack=3
-            flag=false;
-        }
-        if(flag){
-            stack.push(-1);
-        }
-    }
-    return stack;
-}
+// function biggerElement(arr){
+//     let flag=true;
+//     let stack=[];
+//     for(let i=0;i<arr.length;i++){
+//         if(stack.length==0){           //[1,3,2,4]
+//             stack.push(arr[i]);
+//             i++;
+//         }
+//         if(stack[0]<arr[i]){    //stack=
+//             stack.pop()
+//             stack.push(arr[i]);   //stack=3
+//             flag=false;
+//         }
+//         if(flag){
+//             stack.push(-1);
+//         }
+//     }
+//     return stack;
+// }
 
 console.log(biggerElement([1,3,2,4]));
 
