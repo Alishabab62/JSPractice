@@ -1388,10 +1388,41 @@
 // console.log(q.isEmpty());
 
 
-let arr=[1,2,3,4,5];
-let newArr=[];
-for(let i=0;i<arr.length-1;i++){
-    arr[i]=arr[i+1];
+// let arr=[1,2,3,4,5];
+// let newArr=[];
+// for(let i=0;i<arr.length-1;i++){
+//     arr[i]=arr[i+1];
+// }
+// arr.pop()
+// console.log(arr);
+
+
+class deQueue{
+    constructor(){
+        this.arr=[]
+    }
+    addStart(a){
+        this.arr.unshift(a);
+    }
+    addRear(a){
+        this.arr.push(a);
+    }
+    removeStart(){
+        this.arr.shift();
+    }
+    removeEnd(){
+        this.arr.pop();
+    }
+    isEmpty(){
+        this.arr.length===0 ? true : false
+    }
+    clear(){
+        this.arr=[];
+    }
 }
-arr.pop()
-console.log(arr);
+
+let q=new deQueue();
+q.addStart(4)
+q.addStart(5)
+q.addRear(6)
+console.log(q);
