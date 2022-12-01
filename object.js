@@ -1197,39 +1197,147 @@
 // console.log(biggerElement([1,3,2,4]));
 
 
-var searchRange = function(nums, target) {
-    var left=0;
-    var right=nums.length;
-    let tempArr=[-1,-1];
-    while(left<=right){
-        let mid=Math.floor((left+right)/2);      //2
-        if(nums[mid]==target){
-            tempArr[0]=mid;
-            right=mid;
-        }
-        else if(nums[mid]>=target){
-            right=mid-1;
-        }
-        else{
-            left=mid+1;
-        }
-    }
-    var left=0;
-    var right=nums.length;
-    while(left<=right){
-        let mid=Math.floor((left+right)/2);      //2
-        if(nums[mid]==target){
-            tempArr[1]=mid;
-            left=right;
-        }
-        else if(nums[mid]>=target){
-            right=mid-1;
-        }
-        else{
-            left=mid+1;
-        }
-    }
-    return tempArr;
-};
-console.log(searchRange([5,7,7,8,8,10],8));
+// var searchRange = function(nums, target) {
+//     var left=0;
+//     var right=nums.length;
+//     let tempArr=[-1,-1];
+//     while(left<=right){
+//         let mid=Math.floor((left+right)/2);      //2
+//         if(nums[mid]==target){
+//             tempArr[0]=mid;
+//             right=mid;
+//         }
+//         else if(nums[mid]>=target){
+//             right=mid-1;
+//         }
+//         else{
+//             left=mid+1;
+//         }
+//     }
+//     var left=0;
+//     var right=nums.length;
+//     while(left<=right){
+//         let mid=Math.floor((left+right)/2);      //2
+//         if(nums[mid]==target){
+//             tempArr[1]=mid;
+//             left=right;
+//         }
+//         else if(nums[mid]>=target){
+//             right=mid-1;
+//         }
+//         else{
+//             left=mid+1;
+//         }
+//     }
+//     return tempArr;
+// };
+// console.log(searchRange([5,7,7,8,8,10],8));
 
+
+
+
+
+//
+
+// let str="coderbyte";
+// // let str="I Love Code"
+// let ct="j9e01hg5ca";
+
+// let str1=str.toLowerCase();
+// let rev=str1.split("").reverse().join(""); 
+// console.log(rev);
+
+// let rev1=str.split("").reverse().join("");          //tybrdo        ,do voL I
+// console.log(rev1);
+// let newStr="",i=0;
+// while(i<=rev.length-1){
+//     let res=ct.includes(rev[i]);
+//     if(!(res)){
+//         newStr+=rev1[i];
+//     }
+//   i++;
+// }
+
+// console.log(newStr);
+
+
+
+
+
+
+//?? question
+
+// let str="j3ab??cdesfhd?h5";
+// for(let i=0;i<str.length-1;i++){
+//     let regex=/[0-9]/;
+//     let check=regex.test(str[i]);
+//     let count=0;
+//     if(check){
+//         for(let j=i;j<=i+10;j++){
+//             if(str[j]=="?"){
+//                 count++;
+//             }
+//         }
+//         if(count==3){
+//             console.log(true);
+//         }else{
+//             console.log(false);
+//         }
+//     }
+// }
+
+
+
+
+
+
+//time conversion
+
+
+// let min=63;
+
+// let hour=Math.floor(63/60);
+// let minute=min-(hour*60);
+// console.log(hour+":"+minute);
+
+// console.log(NaN===NaN)
+
+
+// function abc(count){
+//     if(count===0){
+//         return;
+//     }
+//     console.log(count);
+//     count--
+//     abc(count);
+//     console.log(count);
+// }
+// abc(5)
+
+
+
+// class hello{
+//     demo(){
+//         console.log("hello");
+//     }
+//     demo2(a,b){
+//         return a+b;
+//     }
+// }
+
+// let obj=new hello();
+// obj.demo();
+// console.log(obj.demo2(2,3));
+
+
+class hello{
+    constructor(name){
+    this.name=name;
+    console.log(this.name);
+    }
+    demo(name){
+        console.log("Hello " +name);
+    }
+}
+let obj=new hello("Shabab");
+obj.demo("Shabab");
