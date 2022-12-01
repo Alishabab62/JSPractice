@@ -1330,14 +1330,68 @@
 // console.log(obj.demo2(2,3));
 
 
-class hello{
-    constructor(name){
-    this.name=name;
-    console.log(this.name);
-    }
-    demo(name){
-        console.log("Hello " +name);
-    }
+// class hello{
+//     constructor(name){
+//     this.name=name;
+//     console.log(this.name);
+//     }
+//     // demo(name){
+//     //     console.log("Hello " +name);
+//     // }
+// }
+// let obj=new hello("Shabab");
+// // obj.demo("Shabab");
+// console.log(obj)
+
+
+
+// class Queue{
+//     constructor(){
+//         this.item=[];
+//     }
+//     add(a){
+//         this.item.push(a);
+//     }
+//     remove(){
+//         this.item.shift();
+//     }
+//     peek(){
+//         return this.item[0];
+//     }
+//     size(){
+//         return this.item.length;
+//     }
+//     isEmpty(){
+//         return this.item.length === 0 ? true : false;
+//     }
+//     clear(){
+//         this.item=[];
+//     }
+// }
+
+// let q=new Queue();
+// q.add(5);
+// q.add(6);
+// q.add(7);
+// q.add(8);
+// q.add(9);
+
+// console.log(q.size());
+// q.remove();
+// q.remove();
+// q.remove();
+// q.remove();
+// q.remove();
+// q.remove();
+
+// console.log(q.peek());
+// console.log(q.isEmpty());
+
+
+let arr=[1,2,3,4,5];
+let newArr=[];
+for(let i=0;i<arr.length-1;i++){
+    arr[i]=arr[i+1];
 }
-let obj=new hello("Shabab");
-obj.demo("Shabab");
+arr.pop()
+console.log(arr);
