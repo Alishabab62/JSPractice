@@ -22,4 +22,4 @@ function mergeArray(arr1,arr2){
 }
 
 
-console.log(mergeArray([1,3,5],[2,4,6]));
+console.log(mergeArray([1,2,3,0,0,0],[2,5,6]));

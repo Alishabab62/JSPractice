@@ -1397,32 +1397,183 @@
 // console.log(arr);
 
 
-class deQueue{
-    constructor(){
-        this.arr=[]
-    }
-    addStart(a){
-        this.arr.unshift(a);
-    }
-    addRear(a){
-        this.arr.push(a);
-    }
-    removeStart(){
-        this.arr.shift();
-    }
-    removeEnd(){
-        this.arr.pop();
-    }
-    isEmpty(){
-        this.arr.length===0 ? true : false
-    }
-    clear(){
-        this.arr=[];
-    }
-}
+// class deQueue{
+//     constructor(){
+//         this.arr=[]
+//     }
+//     addStart(a){
+//         this.arr.unshift(a);
+//     }
+//     addRear(a){
+//         this.arr.push(a);
+//     }
+//     removeStart(){
+//         this.arr.shift();
+//     }
+//     removeEnd(){
+//         this.arr.pop();
+//     }
+//     isEmpty(){
+//         this.arr.length===0 ? true : false
+//     }
+//     clear(){
+//         this.arr=[];
+//     }
+// }
 
-let q=new deQueue();
-q.addStart(4)
-q.addStart(5)
-q.addRear(6)
-console.log(q);
+// let q=new deQueue();
+// q.addStart(4)
+// q.addStart(5)
+// q.addRear(6)
+// console.log(q);
+
+
+
+
+// function factorial(n){
+//     let count=0;
+//     for(let i=5;i<=n;i=i+5){
+//         let x=i;
+//         while(x>0 && x%5==0)
+//         {
+//             count++;
+//             x/=5;
+//         }
+//     }
+//     return count;
+// }
+// console.log(factorial(30));
+
+
+
+// var fractionToDecimal = function(numerator, denominator) {
+//     let str="";
+//     let q=Math.floor(numerator/denominator);
+//     str=str+q;
+//     let rem=numerator%denominator;
+//     if(rem==0){
+//         return str;
+//     }else{
+//         str=str+".";
+//         let map1=new Map();
+//         while(rem!=0){
+//             if(map1.get(rem)!=undefined){
+//                 let len=map1.get(rem);
+//                 let arr=str.split('');
+//                 arr.splice(len,0,"(");
+//                 console.log(arr)
+//                 arr.push(")")
+//                 str=arr.join('');
+//                 break;
+//             }
+//             else{
+//             map1.set(rem,str.length);
+//             rem=rem*10;
+//             q=Math.floor(rem/denominator);
+//             rem=rem%denominator;
+//             str=str+q;
+//             }
+//         }
+//     }
+//     return str;
+// };
+
+
+// console.log(fractionToDecimal(93,7));
+
+
+
+// var myPow = function(x, n) {
+//     let count=x;
+//     if(n<0){
+//         count=(1/(count*x))
+//     }
+//     for(let i=1;i<n;i++){
+//         count=count*x;
+//     }
+//     return count;
+// };
+
+// console.log(myPow(2,-2));
+
+// var isPowerOfTwo = function(n) {
+//     if(n==1) return true;
+//     if(n==0) return false;
+//     // n=Math.abs(n);
+//     console.log(n)
+//     let res=1;
+//     for(let i=1;i<n;i++){
+//         res*=2;
+//         if(res==n) return true;
+//         // if(res>n/2) return false;
+//     }
+//     return false;
+// };
+// console.log(isPowerOfTwo(-16));
+
+// var rotate = function(nums, k) {
+//     nums.reverse();
+//     reverseArray(nums,0,k-1);
+//     reverseArray(nums,k,nums.length-1);
+//     console.log(nums);
+// }
+// rotate([1,2,3,4,5,6,7],3);
+
+// function reverseArray(array,low,high){
+//     while(low < high){
+//         let temp=array[low];
+//         array[low]=array[high];
+//         array[high]=temp;
+//         low++;
+//         high--;
+//     }
+// }
+
+// var isValid = function(s) {
+//     let stack=[];
+//     let len=stack.length-1;
+//     for(let i=0;i<s.length;i++){
+//         if(stack.length==0){
+//             stack.push(s[i]);
+//         }
+//    else if(stack[len]=="("){
+//         if(s[i]!=')'){
+//             return false;
+//         }
+//     }
+//     else if(stack[len]=="{"){
+//         if(s[i]!="}"){
+//             return false;
+//         }
+//     }
+//     else if(stack[len]=="["){
+//         if(s[i]!="]"){
+//             return false;
+//         }
+//     }
+//     else{
+//         return false;
+//     }
+//     stack.pop();
+//     }
+//     return true;
+// };
+// console.log(isValid(")"));
+
+// function isValid(s) {
+//     const left = [];  //(   )
+//     const legend = {
+//       '(': ')',    //)    
+//       '{': '}',
+//       '[': ']'
+//     };
+//     for (let i = 0; i < s.length; i++) {      
+//       if (s[i] === '(' || s[i] === '{' || s[i] === '[') {  //(    )
+//         left.push(s[i]);                                        //( 
+//       } else if (legend[left.pop()] !== s[i]) {          //
+//         return false;
+//       }
+//     }
+//     return left.length ? 0 : 1;
+//   };
+//   console.log(isValid("(){}[]"));
