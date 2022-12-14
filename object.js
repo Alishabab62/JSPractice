@@ -1577,3 +1577,161 @@
 //     return left.length ? 0 : 1;
 //   };
 //   console.log(isValid("(){}[]"));
+
+// var twoSum = function(nums, target) {
+  //     for(let i=0;i<nums.length;i++){
+  //         for(let j=1;j<nums.length;j++){
+  //             if(nums[i]+nums[j]==target &&i!=j){
+  //             return [i,j];
+  //     }
+  // }
+  // }  
+//       nums.sort(function(a,b){ return a-b});
+//       let i=0,j=nums.length-1;
+//   while(i<nums.length-1 && j>=0){
+//       if(nums[i]+nums[j]==target){
+//           return [i,j];
+//       }
+//       else if(nums[i]+nums[j]>target){
+//           j--;
+//       }
+//       else if(nums[i]+nums[j]<target){
+//           i++;
+//       }
+//   }
+//   };
+
+//   console.log(twoSum([3,2,4],6));
+
+
+// var backspaceCompare = function(s, t) {
+//     let sArray=s.split('');
+//     let i=sArray.length-2,j=sArray.length-1;
+//     console.log(i,j)
+//     while(j>=0){
+//     if(sArray[j]=='#'){
+//         if(sArray[i]!='#'){
+//             sArray.splice(j,1);
+//             sArray.splice(i,1);
+//             j=j-2;
+//             i--;
+//         }
+//         else{
+//             i--;
+//         }
+        
+//     } 
+//     else{
+//          j--;
+//          i--;
+//         }  
+//     }
+//     console.log(sArray)
+//     let tArray=t.split('');
+//      i=tArray.length-2,j=tArray.length-1;
+//     console.log(i,j)
+//     while(j>=0){
+//         if(tArray[j]=='#'){
+//             if(tArray[i]!='#'){
+//                 tArray.splice(j,1);
+//                 tArray.splice(i,1);
+//                 j=j-2;
+//                 i--;
+//             }
+//             else{
+//                 i--;
+//             }
+//         } 
+//         else{
+//              j--;   
+//              i--;
+//             }  
+//         }
+//         console.log(tArray)
+//         if(sArray.join('')==tArray.join('')){
+//             return true;
+//         }
+//         return false;
+   
+// };
+
+// console.log(backspaceCompare("y#f#o##f","y#fo##f"));  //btw       btw
+
+
+
+// var checkValidString = function(s) {
+//     if(s[0]==')'){
+//         return false;
+//     }
+//   let openStack=[];
+//   let starStack=[];
+//   for(let i=0;i<s.length;i++){
+    
+//       if(s[i]=='('){
+//           openStack.push(i);
+//       }
+//       else if(s[i]=='*'){
+//           starStack.push(i);
+//       }
+//       else if(s[i]==')'){
+//           if(openStack.length>0){
+//               openStack.pop();
+//           }else{
+//               starStack.pop();
+//           }
+//       }
+//       if(starStack.length==0 && openStack.length==0){
+//         if(s[i]==')'){
+//             return false;
+//         }
+//       }
+//   }
+//   console.log(starStack,openStack);
+//   let i=0,j=0;
+//     while(i<openStack.length){
+//         if(openStack.length>0){
+//             openStack.pop();
+//         }
+//         else{
+//             starStack.pop();
+//         }
+//        if(openStack.length==0){
+//         return true;
+//        }
+//         i++,j++;
+//     }
+//     return false;
+   
+// };
+
+// console.log(checkValidString("((()(((*)*))"));
+
+
+
+var findMaxLength = function(nums) {
+    if(nums.length==2) return nums.length;
+    let ans=0;
+    let map=new Map();
+    let sum=0;
+    map.set(0,-1);
+    for(let i=0;i<nums.length;i++){
+        if(nums[i]==0){
+            sum=sum-1;
+        }else if(nums[i]==1){
+            sum=sum+1;
+        }
+        if(map.has(sum)){
+            let index=map.get(sum);
+            let len=i-index;
+            if(ans<=len){
+                ans=len;
+            }
+        }
+        else{
+            map.set(sum,i);
+        }
+    }
+    return ans;
+};
+
+console.log(findMaxLength([0,1,1]))

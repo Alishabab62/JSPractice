@@ -148,25 +148,27 @@
 
 
 
-var trailingZeroes = function(n){
-    function fact(n){
-        if(n==0){
-            return 1;
-        }
-        return n*fact(n-1);
-    }
-    let res=fact(n);
-    let splitRes=res.toString();
-    let split=splitRes.split('');
-    console.log(split)
-    let count=0;
-    for(let i=0;i<split.length;i++){
-        if(split[i]==0){
-            count++;
-        }
-    }
-    return count;
-};
+// var trailingZeroes = function(n){
+//     function fact(n){
+//         if(n==0){
+//             return 1;
+//         }
+//         return n*fact(n-1);
+//     }
+//     let res=fact(n);
+//     let splitRes=res.toString();
+//     let split=splitRes.split('');
+//     console.log(split)
+//     let count=0;
+//     for(let i=0;i<split.length;i++){
+//         if(split[i]==0){
+//             count++;
+//         }
+//     }
+//     return count;
+// };
 
 
-console.log(trailingZeroes(6));
+// console.log(trailingZeroes(6));
+
+
